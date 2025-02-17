@@ -7,7 +7,9 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Enable CORS for this origin
-CORS(app, resources={r"/submit-form": {"origins": "http://localhost:3000"}})
+# local_url = "http://localhost:3000"
+public_url = "https://likenassuf.vercel.app"
+CORS(app, resources={r"/submit-form": {"origins": public_url}})
 
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')  # Set your SendGrid API key in environment variables
