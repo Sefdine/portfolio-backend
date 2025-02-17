@@ -9,6 +9,7 @@ app = Flask(__name__)
 # Enable CORS for this origin
 # local_url = "http://localhost:3000"
 public_url = "https://likenassuf.vercel.app"
+
 CORS(app, resources={r"/submit-form": {"origins": public_url}})
 
 
